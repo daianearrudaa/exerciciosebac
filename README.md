@@ -1,2 +1,2 @@
 # exerciciosebac
-Exercicio Html
+Exercicios
