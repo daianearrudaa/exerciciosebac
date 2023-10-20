@@ -1,0 +1,73 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+@use 'produtos/produtos.scss';
+
+@mixin container(){
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+body {
+    background-color: variaveis.$corPrincipal;
+}
+
+li {
+    list-style: none;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    @include container();
+    background-color: variaveis.$corHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    display: flex;
+
+    & li{
+    font-weight: bold;
+    margin-left: 24px;
+    }
+
+    & li a {
+    color: variaveis.$corPrincipal;
+    text-decoration: none;
+    }
+}
+
+section {
+    padding: 56px 0;
+}
+
+@media screen and (max-width: variaveis.$tablet){
+    .container{
+     max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+ }
+ 
+
+@media screen and (max-width: variaveis.$mobile){
+    .products {
+        display: block;
+    }   
+
+    .product-item  {
+        margin-bottom: 32px;
+    } 
+}
+ 
